@@ -9,7 +9,7 @@ public class BankAccount implements BankOperations {
 	private String accountType;
 	private double balance;
 	
-	/* This constructor takes no parameter.
+	/** This constructor takes no parameter.
 	 *It generates a random UUID with 6 characters.
 	 */
 	public BankAccount() {
@@ -17,7 +17,9 @@ public class BankAccount implements BankOperations {
 		this.balance = 0;
 		this.accountType = "Bank account";
 	}
-	//Getters and setters to the attributes for this class.
+	/**
+	 * Getters and setters to the attributes for this class.
+	 */
 	public String getAccountNumber() {
 	return accountNumber;
 	}
@@ -41,7 +43,7 @@ public class BankAccount implements BankOperations {
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
-	/*
+	/**
 	 * This method controls if the amount that is going to be
 	 * withdrawn is not negative value.
 	 */
@@ -52,7 +54,7 @@ public class BankAccount implements BankOperations {
 			System.out.println("You can not withdraw a negative value!");
 		}
 	}
-	/*
+	/**
 	 * This method controls if the amount that is going to be
 	 * deposited is not negative value and prints a message if it is.
 	 */
@@ -63,7 +65,9 @@ public class BankAccount implements BankOperations {
 			System.out.println("You cannot deposit a negative value!");
 		}
 	}
-	//Method toString which returns the information below.
+	/**
+	 * Method toString which returns the information below.
+	 */
 	public String toString(){
 		return "BankAccount [accountNumber = "+ getAccountNumber()+ ", Balance = " + getBalance()+ " , AccountType = " + getAccountType()+"]";
 	}
